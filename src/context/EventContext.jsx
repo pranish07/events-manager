@@ -23,7 +23,7 @@ const reducer = (state, action) => {
     case "SEARCH_BY":
       return{
         ...state,
-        filteredData:state.data.filter((data)=> data.title.toLowerCase().includes(action.payload.toLowerCase().trim())
+        filteredData:state.data.filter((data)=> data.title.toLowerCase().includes(action.payload.toLowerCase().trim()) || data.eventType.toLowerCase().includes(action.payload.toLowerCase().trim())
         )
       }
 
