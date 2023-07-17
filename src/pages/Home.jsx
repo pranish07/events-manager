@@ -2,27 +2,30 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { useEvent } from "../context/EventContext";
 
+import "./home.css";
 export const Home = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useEvent();
   console.log(state, dispatch);
   return (
     <div>
-      <h1>Meetup events</h1>
-    
-      <select
-        defaultValue={"placeholder"}
-        onChange={(event) =>
-          dispatch({ type: "FILTER_BY", payload: event.target.value })
-        }
-      >
-        <option value={"placeholder"} disabled>
-          Select Event type
-        </option>
-        <option value="Online">Online</option>
-        <option value="Offline">Offline</option>
-        <option value="Both">Both</option>
-      </select>
+      <div className="title">
+        <h1>Meetup events</h1>
+
+        <select
+          defaultValue={"placeholder"}
+          onChange={(event) =>
+            dispatch({ type: "FILTER_BY", payload: event.target.value })
+          }
+        >
+          <option value={"placeholder"} disabled>
+            Select Event type
+          </option>
+          <option value="Online">Online</option>
+          <option value="Offline">Offline</option>
+          <option value="Both">Both</option>
+        </select>
+      </div>
       <div className="events">
         {state.filteredData.length ? (
           state.filteredData.map(
@@ -37,15 +40,12 @@ export const Home = () => {
               });
 
               return (
-                <div onClick={() => navigate(`/event/${id}`)}>
-                  <p>{eventType}</p>
+                <div onClick={() => navigate(`/event/${id}`)} className="card">
+                  <p className="tag">{eventType}</p>
                   <img src={eventThumbnail} alt="" width={200} height={200} />
                   <p>
-                    {day}
-                    {month}
-                    {dateNumber}
-                    {year}
-                    {time} IST
+                    {day} {month}
+                    {dateNumber} {year} {time} IST
                   </p>
                   <h4>{title}</h4>
                 </div>

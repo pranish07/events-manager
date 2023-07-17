@@ -1,0 +1,11 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    padding:0 3rem;
+}
+.nav-search input{
+    padding:.5rem 1rem;
+}
+.nav-img img{
+    cursor: pointer;
+}

@@ -1,0 +1,58 @@
+.event-details {
+  display: flex;
+  padding: 0 3rem;
+  gap: 2rem;
+  justify-content: space-between;
+background-color: aliceblue;
+}
+.main-info {
+  width: 40%;
+
+}
+.info{
+background-color: white;
+padding:1rem;
+}
+.main-info .event-img {
+  width: 100%;
+  background-size: cover;
+}
+.event-tag-container{
+    display: flex;
+    gap:0 1rem; 
+}
+.event-tag {
+  padding: 0.5rem;
+  background-color: orangered;
+  color: white;
+  width: fit-content;
+  border: none;
+  border-radius: 10px;
+}
+
+.secondary-info{
+    width:30%;
+}
+.startTime{
+
+}
+.endTime{
+    display: block;
+}
+.address{
+    display: block;
+}
+.speaker-card{
+    background-color: white;
+    padding:1rem;
+    border-radius:10px;
+}
+.speaker-container{
+    display: flex;
+    gap:2rem;
+    justify-content: center;
+}
+.speaker-card img{
+    border-radius: 50%;
+    background-size:cover;
+}

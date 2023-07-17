@@ -1,0 +1,33 @@
+.title {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.title select {
+  margin: auto 0;
+}
+.events {
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%;
+  gap: 1rem;
+  justify-content: center;
+}
+.card {
+  position: relative;
+  cursor: pointer;
+}
+.card .tag {
+  padding: .5rem;
+  border-radius:.5rem;
+  width: 70px;
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+}
+.card img{
+    background-size: cover;
+    width:100%;
+}
