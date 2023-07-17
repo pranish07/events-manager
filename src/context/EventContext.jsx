@@ -10,7 +10,6 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
-  console.log(state, action);
   switch (action.type) {
     case "FILTER_BY":
       return {

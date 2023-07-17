@@ -6,7 +6,6 @@ import "./home.css";
 export const Home = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useEvent();
-  console.log(state, dispatch);
   return (
     <div>
       <div className="title">

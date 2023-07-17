@@ -9,7 +9,6 @@ export const EventDetails = () => {
   const { state, showRSVP, setShowRSVP } = useEvent();
   const findEvent = state.filteredData.find((event) => event.id === eventId);
   const date = new Date(findEvent?.eventEndTime);
-  console.log(findEvent);
 
   const currDate = new Date();
   const endDay = date?.toLocaleDateString("en-US", { weekday: "long" });
@@ -65,7 +64,7 @@ export const EventDetails = () => {
         <h2>Event Tags</h2>
         <div className="event-tag-container">
           {findEvent?.eventTags?.map((tag) => (
-            <p className="event-tag">{tag}</p>
+            <p className="event-tag" key={tag}>{tag}</p>
           ))}
         </div>
       </div>
@@ -97,7 +96,7 @@ export const EventDetails = () => {
             <h2>Speakers: ({findEvent.speakers.length})</h2>
             <div className="speaker-container">
               {findEvent?.speakers?.map(({ name, image, designation }) => (
-                <div className="speaker-card">
+                <div className="speaker-card" key={name}>
                   <img src={image} alt={name} height={60} width={60} />
                   <p>
                     <b>{name}</b>

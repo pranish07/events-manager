@@ -5,7 +5,6 @@ import "./modalForm.css";
 export const ModalForm = ({ eventId }) => {
   const { state, dispatch, setShowRSVP } = useEvent();
   const findEvent = state.filteredData.find((event) => event.id === eventId);
-  console.log(findEvent);
   return (
     <div className="overlay">
       <form
