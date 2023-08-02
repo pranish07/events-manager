@@ -8,7 +8,7 @@ export const Home = () => {
   const { state, dispatch } = useEvent();
   return (
     <div>
-      <div className="title">
+      <div className="title p-3">
         <h1>Meetup events</h1>
 
         <select
@@ -39,14 +39,18 @@ export const Home = () => {
               });
 
               return (
-                <div onClick={() => navigate(`/event/${id}`)} className="card">
-                  <p className="tag">{eventType}</p>
+                <div
+                  onClick={() => navigate(`/event/${id}`)}
+                  className="card"
+                  key={id}
+                >
+                  <p className="tag font-bold">{eventType}</p>
                   <img src={eventThumbnail} alt="" width={200} height={200} />
                   <p>
                     {day} {month}
                     {dateNumber} {year} {time} IST
                   </p>
-                  <h4>{title}</h4>
+                  <h4 className="font-bold">{title}</h4>
                 </div>
               );
             }

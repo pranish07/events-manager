@@ -8,7 +8,7 @@ export const Navbar = () => {
   const { state, dispatch } = useEvent();
   return (
     <div>
-    <div className="navbar-container">
+    <div className="navbar-container p-3 pb-2">
       <div className="nav-img">
         <img src={meetup} alt="meetup" onClick={() => navigate("/")} />
       </div>

@@ -110,7 +110,7 @@ export const EventDetails = () => {
 
         <div className="rsvp">
           {!isEventOld && (
-            <button onClick={() => setShowRSVP(true)}>
+            <button className="bg-cyan-500 hover:bg-cyan-600 p-2 text-white rounded-md" onClick={() => setShowRSVP(true)}>
               {" "}
               {findEvent?.rsvp ? "Already RSVP" : "RSVP"}
             </button>
